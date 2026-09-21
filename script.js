@@ -31,15 +31,10 @@ const brands = {
 };
 const productSchema = {
   "@context":"https://schema.org",
-  "@type":"ItemList",
-  "name":"Danh sách sản phẩm NovaTech",
-  "numberOfItems":products.length,
-  "itemListElement":products.map((p,index)=>({
-    "@type":"ListItem",
-    "position":index+1,
-    "url":"https://tamz11.github.io/novotech/#products",
-    "item":{
+  "@graph":products.map(p=>(
+    {
       "@type":"Product",
+      "@id":`https://tamz11.github.io/novotech/#product-${p.id}`,
       "name":p.name,
       "image":p.image,
       "description":p.meta,
@@ -58,7 +53,7 @@ const productSchema = {
         "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"VN","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":7,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"}
       }
     }
-  }))
+  ))
 };
 const productSchemaScript=document.createElement("script");
 productSchemaScript.type="application/ld+json";
