@@ -23,6 +23,38 @@ const products = [
 let currentCategory="all", visibleCount=4, cart=[];
 const money = n => new Intl.NumberFormat("vi-VN").format(n)+"đ";
 const grid=document.querySelector("#productGrid");
+const productSchema = {
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Danh sách sản phẩm NovaTech",
+  "numberOfItems":products.length,
+  "itemListElement":products.map((p,index)=>({
+    "@type":"ListItem",
+    "position":index+1,
+    "url":"https://tamz11.github.io/novotech/#products",
+    "item":{
+      "@type":"Product",
+      "name":p.name,
+      "image":p.image,
+      "description":p.meta,
+      "category":p.category,
+      "brand":{"@type":"Brand","name":p.name.split(" ")[0]},
+      "offers":{
+        "@type":"Offer",
+        "priceCurrency":"VND",
+        "price":String(p.price),
+        "priceValidUntil":"2026-12-31",
+        "availability":"https://schema.org/InStock",
+        "url":"https://tamz11.github.io/novotech/#products",
+        "seller":{"@type":"Organization","name":"NovaTech","url":"https://tamz11.github.io/novotech/"}
+      }
+    }
+  }))
+};
+const productSchemaScript=document.createElement("script");
+productSchemaScript.type="application/ld+json";
+productSchemaScript.textContent=JSON.stringify(productSchema);
+document.head.appendChild(productSchemaScript);
 function renderProducts(){
   let list=products.filter(p=>currentCategory==="all"||p.category===currentCategory);
   const sort=document.querySelector(".sort-btn.active")?.dataset.sort;
