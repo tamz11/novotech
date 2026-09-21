@@ -23,6 +23,12 @@ const products = [
 let currentCategory="all", visibleCount=4, cart=[];
 const money = n => new Intl.NumberFormat("vi-VN").format(n)+"đ";
 const grid=document.querySelector("#productGrid");
+const brands = {
+  laptop: { "MacBook Air M4":"Apple", "ASUS Zenbook 14 OLED":"ASUS", "Lenovo IdeaPad Slim 5":"Lenovo", "Mac mini M4":"Apple", "Dell XPS 13":"Dell" },
+  phone: { "iPhone 16":"Apple", "Samsung Galaxy S25":"Samsung", "Google Pixel 9":"Google", "Samsung Galaxy S25 Ultra":"Samsung" },
+  audio: { "Sony WH-1000XM5":"Sony", "Apple AirPods Pro 2":"Apple", "Apple AirPods 4":"Apple", "Sonos Era 100":"Sonos" },
+  accessory: { "Logitech MX Keys Mini":"Logitech", "Anker 737 Power Bank":"Anker", "Apple Watch SE":"Apple", "iPad Air M3":"Apple", "Samsung Galaxy Watch7":"Samsung" }
+};
 const productSchema = {
   "@context":"https://schema.org",
   "@type":"ItemList",
@@ -38,7 +44,8 @@ const productSchema = {
       "image":p.image,
       "description":p.meta,
       "category":p.category,
-      "brand":{"@type":"Brand","name":p.name.split(" ")[0]},
+      "sku":`novatech-${p.id}`,
+      "brand":{"@type":"Brand","name":brands[p.category]?.[p.name] || p.name.split(" ")[0]},
       "offers":{
         "@type":"Offer",
         "priceCurrency":"VND",
@@ -46,7 +53,9 @@ const productSchema = {
         "priceValidUntil":"2026-12-31",
         "availability":"https://schema.org/InStock",
         "url":"https://tamz11.github.io/novotech/#products",
-        "seller":{"@type":"Organization","name":"NovaTech","url":"https://tamz11.github.io/novotech/"}
+        "seller":{"@type":"Organization","name":"NovaTech","url":"https://tamz11.github.io/novotech/"},
+        "shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0","currency":"VND"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"VN"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":0,"maxValue":1,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},
+        "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"VN","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":7,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/FreeReturn"}
       }
     }
   }))
