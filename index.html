@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NovaTech - cửa hàng điện tử chính hãng: laptop, điện thoại, tai nghe, màn hình và phụ kiện với tư vấn minh bạch." />
+    <meta name="keywords" content="mua đồ điện tử, laptop chính hãng, điện thoại, tai nghe, phụ kiện công nghệ" />
+    <meta name="theme-color" content="#07101f" />
+    <meta property="og:title" content="NovaTech | Thiết bị điện tử cho nhịp sống hiện đại" />
+    <meta property="og:description" content="Khám phá thiết bị công nghệ được tuyển chọn, giao nhanh và bảo hành rõ ràng." />
+    <meta property="og:type" content="website" />
+    <title>NovaTech | Thiết bị điện tử cho nhịp sống hiện đại</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@graph":[
+          {"@type":"Organization","@id":"https://novatech.example/#organization","name":"NovaTech","url":"https://novatech.example/","logo":"https://novatech.example/logo.png","sameAs":[]},
+          {"@type":"WebSite","@id":"https://novatech.example/#website","url":"https://novatech.example/","name":"NovaTech","publisher":{"@id":"https://novatech.example/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://novatech.example/?q={search_term_string}","query-input":"required name=search_term_string"}},
+          {"@type":"FAQPage","mainEntity":[
+            {"@type":"Question","name":"NovaTech có bán hàng chính hãng không?","acceptedAnswer":{"@type":"Answer","text":"Có. NovaTech chỉ phân phối sản phẩm có nguồn gốc rõ ràng, hóa đơn điện tử và chính sách bảo hành minh bạch."}},
+            {"@type":"Question","name":"Tôi có thể đổi trả sản phẩm trong bao lâu?","acceptedAnswer":{"@type":"Answer","text":"Bạn có thể yêu cầu đổi sản phẩm trong 7 ngày nếu sản phẩm lỗi do nhà sản xuất và còn đủ phụ kiện, bao bì."}},
+            {"@type":"Question","name":"Thời gian giao hàng dự kiến là bao lâu?","acceptedAnswer":{"@type":"Answer","text":"Đơn nội thành thường nhận trong 2–4 giờ; tỉnh thành khác từ 1–3 ngày làm việc."}}
+          ]}
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="announcement">Miễn phí giao hàng đơn từ 500.000đ <span>•</span> Đổi trả 7 ngày <span>•</span> Tư vấn 1:1 từ chuyên gia</div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="NovaTech trang chủ"><span class="brand-mark">N</span><span>nova<span>tech</span></span></a>
+        <nav class="desktop-nav" aria-label="Điều hướng chính">
+          <a href="#products">Sản phẩm</a>
+          <a href="#why-us">Vì sao NovaTech</a>
+          <a href="#guide">Góc tư vấn</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn" id="searchToggle" aria-label="Tìm kiếm">⌕</button>
+          <button class="cart-btn" id="cartToggle" aria-label="Mở giỏ hàng"><span>Giỏ hàng</span><b id="cartCount">0</b></button>
+          <button class="menu-btn" id="menuToggle" aria-label="Mở menu">☰</button>
+        </div>
+      </div>
+      <div class="search-panel" id="searchPanel"><div class="container"><label for="searchInput">Bạn đang tìm gì?</label><input id="searchInput" type="search" placeholder="Ví dụ: laptop cho sinh viên..." autocomplete="off" /></div></div>
+      <nav class="mobile-nav" id="mobileNav"><a href="#products">Sản phẩm</a><a href="#why-us">Vì sao NovaTech</a><a href="#guide">Góc tư vấn</a><a href="#faq">FAQ</a></nav>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-copy">
+          <div class="eyebrow"><i></i> Công nghệ chọn lọc, dùng đúng nhu cầu</div>
+          <h1>Thiết bị tốt hơn.<br /><em>Cuộc sống nhẹ hơn.</em></h1>
+          <p>Khám phá hệ sinh thái điện tử được tuyển chọn kỹ — từ chiếc laptop đầu tiên đến góc làm việc mơ ước.</p>
+          <div class="hero-cta"><a href="#products" class="btn btn-primary">Khám phá sản phẩm <span>↗</span></a><a href="#guide" class="text-link">Xem cẩm nang mua sắm <span>→</span></a></div>
+          <div class="trust-row"><div><strong>4.9/5</strong><small>Đánh giá khách hàng</small></div><div><strong>12k+</strong><small>Đơn hàng đã giao</small></div><div><strong>24h</strong><small>Hỗ trợ kỹ thuật</small></div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+          <div class="hero-product-card"><span class="floating-label">Mới về</span><img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=900&q=85" alt="Laptop hiện đại màu bạc" /><div class="product-tag">Laptop ultralight · 2024</div></div>
+          <div class="floating-stat"><span class="stat-icon">✦</span><div><strong>Chọn bởi chuyên gia</strong><small>100% kiểm tra trước khi gửi</small></div></div>
+        </div>
+      </section>
+
+      <section class="category-strip"><div class="container category-grid"><button class="category-card active" data-category="all"><span>✦</span><strong>Tất cả</strong><small>Khám phá toàn bộ</small></button><button class="category-card" data-category="laptop"><span>▱</span><strong>Laptop</strong><small>Làm việc & sáng tạo</small></button><button class="category-card" data-category="phone"><span>◉</span><strong>Điện thoại</strong><small>Kết nối mỗi ngày</small></button><button class="category-card" data-category="audio"><span>◒</span><strong>Âm thanh</strong><small>Nghe theo cách bạn muốn</small></button><button class="category-card" data-category="accessory"><span>⌁</span><strong>Phụ kiện</strong><small>Hoàn thiện trải nghiệm</small></button></div></section>
+
+      <section class="section container" id="products">
+        <div class="section-heading"><div><span class="eyebrow">Tuyển chọn tuần này</span><h2>Thiết bị được yêu thích</h2></div><div class="product-controls"><button class="sort-btn active" data-sort="featured">Nổi bật</button><button class="sort-btn" data-sort="price">Giá tốt</button></div></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="center"><button class="btn btn-outline" id="showMore">Xem thêm sản phẩm <span>↓</span></button></div>
+      </section>
+
+      <section class="feature-banner container"><div class="feature-copy"><span class="eyebrow">Setup of the month</span><h2>Góc làm việc<br /><em>có chủ đích.</em></h2><p>Một hệ sinh thái gọn gàng giúp bạn tập trung vào điều quan trọng nhất.</p><a href="#guide" class="text-link light">Khám phá setup <span>↗</span></a></div><div class="setup-image"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Góc làm việc hiện đại với màn hình và laptop" /></div></section>
+
+      <section class="section muted" id="why-us"><div class="container"><div class="section-heading"><div><span class="eyebrow">Mua sắm an tâm</span><h2>Không chỉ là một món đồ.</h2></div><p class="heading-note">Chúng tôi giúp bạn chọn đúng từ lần đầu — bằng thông tin rõ ràng, dịch vụ tử tế và hỗ trợ thật.</p></div><div class="benefit-grid"><article><span class="benefit-number">01</span><div class="benefit-icon">◇</div><h3>Chọn lọc có lý do</h3><p>Mỗi sản phẩm đều được kiểm tra về độ bền, trải nghiệm và giá trị sử dụng trước khi lên kệ.</p></article><article><span class="benefit-number">02</span><div class="benefit-icon">◌</div><h3>Tư vấn theo nhu cầu</h3><p>Không ép mua. Chuyên gia của NovaTech hỏi đúng câu hỏi để tìm thiết bị vừa vặn với bạn.</p></article><article><span class="benefit-number">03</span><div class="benefit-icon">↻</div><h3>Đồng hành dài lâu</h3><p>Bảo hành minh bạch, hỗ trợ cài đặt và hướng dẫn sử dụng sau khi bạn nhận hàng.</p></article></div></div></section>
+
+      <section class="section container guide-section" id="guide"><div class="guide-intro"><span class="eyebrow">Góc tư vấn</span><h2>Chọn công nghệ<br /><em>thông minh hơn.</em></h2><p>Nội dung thực tế, có nguồn tham khảo, giúp bạn tự tin trước mỗi quyết định mua sắm.</p><a href="#faq" class="text-link">Đọc câu hỏi thường gặp <span>→</span></a></div><div class="article-list"><article class="article-card"><div class="article-image"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=700&q=80" alt="Laptop và tai nghe trên bàn làm việc" /><span>Hướng dẫn</span></div><div class="article-body"><small>6 phút đọc · 12.06.2024</small><h3>Laptop cho sinh viên: 5 tiêu chí chọn mua không lãng phí</h3><p>Từ hiệu năng, thời lượng pin đến khả năng nâng cấp — đây là checklist dễ hiểu cho người mới.</p><a href="#faq">Đọc bài viết →</a></div></article><article class="article-card"><div class="article-image"><img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=80" alt="Tai nghe không dây màu đen" /><span>Giải thích</span></div><div class="article-body"><small>4 phút đọc · 08.06.2024</small><h3>Chống ồn chủ động là gì? Có đáng để nâng cấp?</h3><p>Hiểu công nghệ ANC và tìm ra mẫu tai nghe phù hợp với môi trường sống của bạn.</p><a href="#faq">Đọc bài viết →</a></div></article></div></section>
+
+      <section class="faq-section" id="faq"><div class="container faq-layout"><div><span class="eyebrow">Bạn hỏi, chúng tôi trả lời</span><h2>Những điều bạn<br /><em>muốn biết.</em></h2><p>Thông tin minh bạch để bạn mua sắm tự tin hơn.</p></div><div class="faq-list"><details open><summary>NovaTech có bán hàng chính hãng không?<span>+</span></summary><p>Có. NovaTech chỉ phân phối sản phẩm có nguồn gốc rõ ràng, hóa đơn điện tử và chính sách bảo hành minh bạch từ nhà sản xuất.</p></details><details><summary>Tôi có thể đổi trả sản phẩm trong bao lâu?<span>+</span></summary><p>Bạn có thể yêu cầu đổi sản phẩm trong 7 ngày nếu sản phẩm lỗi do nhà sản xuất và còn đủ phụ kiện, bao bì.</p></details><details><summary>Thời gian giao hàng dự kiến là bao lâu?<span>+</span></summary><p>Đơn nội thành thường nhận trong 2–4 giờ; tỉnh thành khác từ 1–3 ngày làm việc. Bạn luôn nhận được mã theo dõi đơn hàng.</p></details><details><summary>Có hỗ trợ trả góp không?<span>+</span></summary><p>Có. NovaTech hỗ trợ trả góp 0% qua thẻ tín dụng của các ngân hàng đối tác cho đơn hàng đủ điều kiện.</p></details></div></div></section>
+
+      <section class="seo-proof container"><div class="proof-icon">⌁</div><div><span class="eyebrow">Minh bạch & dễ hiểu</span><h2>Thông tin bạn cần,<br /><em>không phải lời quảng cáo.</em></h2><p>Nguồn tham khảo: <a href="https://www.energy.gov/energysaver/standby-power" target="_blank" rel="noopener">U.S. Department of Energy</a> · <a href="https://www.consumerreports.org/electronics-computers/" target="_blank" rel="noopener">Consumer Reports</a></p></div><div class="proof-checks"><span>✓ Dữ liệu có cấu trúc</span><span>✓ Cập nhật định kỳ</span><span>✓ Viết cho con người</span></div></section>
+    </main>
+
+    <footer><div class="container footer-top"><div><a class="brand footer-brand" href="#top"><span class="brand-mark">N</span><span>nova<span>tech</span></span></a><p>Công nghệ tốt cho một ngày tốt hơn.</p></div><div class="footer-links"><div><strong>Khám phá</strong><a href="#products">Sản phẩm</a><a href="#guide">Góc tư vấn</a><a href="#why-us">Về NovaTech</a></div><div><strong>Hỗ trợ</strong><a href="#faq">Câu hỏi thường gặp</a><a href="#faq">Chính sách đổi trả</a><a href="#faq">Liên hệ</a></div><div><strong>Theo dõi</strong><a href="#top">Instagram</a><a href="#top">Facebook</a><a href="#top">TikTok</a></div></div></div><div class="container footer-bottom"><span>© 2024 NovaTech. Made with intention.</span><span>GEO-ready · Tốc độ · Tin cậy</span></div></footer>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Giỏ hàng"><div class="drawer-head"><h2>Giỏ hàng <span id="drawerCount">0</span></h2><button id="closeCart" aria-label="Đóng giỏ hàng">×</button></div><div class="cart-items" id="cartItems"><div class="empty-cart">Giỏ hàng của bạn đang trống.<br /><a href="#products" id="browseProducts">Khám phá sản phẩm →</a></div></div><div class="cart-footer"><div><span>Tạm tính</span><strong id="cartTotal">0đ</strong></div><button class="btn btn-primary">Tiến hành thanh toán <span>→</span></button></div></aside><div class="overlay" id="overlay"></div><div class="toast" id="toast">Đã thêm vào giỏ hàng ✓</div>
+    <script src="script.js"></script>
+  </body>
+</html>
